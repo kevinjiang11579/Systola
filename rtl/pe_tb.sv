@@ -2,6 +2,8 @@ module PE_TB;
 	reg clk, rstn, fire;
 	reg [7:0] w, a;
 	wire [7:0] out;
+	wire out_f;
+	reg [7:0] out_a;
 	reg [7:0] cnt;
 
 	integer i;
@@ -15,7 +17,7 @@ module PE_TB;
 		cnt <= cnt + 1'b1;
 	end
 
-	PE dut(clk, rstn, fire, w, a, out);
+	PE dut(clk, rstn, fire, w, a, out_f, out_a, out);
 
 	initial begin
 		clk <= 0;
@@ -23,6 +25,7 @@ module PE_TB;
 		cnt <= 0;
 		w <= 0;
 		a <= 1;
+		fire <= 1;
 
 		$display("Initialized");
 
@@ -35,7 +38,6 @@ module PE_TB;
 
 			w <= w + 1;
 		end
-
 		$finish;
 	end
 endmodule
