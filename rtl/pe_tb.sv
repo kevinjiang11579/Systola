@@ -1,7 +1,7 @@
 module PE_TB;
 	reg clk, rstn, fire;
 	reg [7:0] w, a;
-	wire [7:0] out;
+	wire [11:0] out;
 	wire out_f;
 	reg [7:0] out_a;
 	reg [7:0] cnt;
