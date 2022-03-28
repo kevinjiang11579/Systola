@@ -10,5 +10,11 @@ pe_lin:
 test_pe_lin:
 	iverilog -g2012 -o pe_lin_tb.vvp pe.sv pe_lin.sv pe_lin_tb.sv; vvp pe_lin_tb.vvp
 
+lin_gen:
+	iverilog -g2012 -o lin_gen.vvp pe_lin_gen.sv pe.sv
+
+test_lin_gen:
+	iverilog -g2012 -o lin_gen_tb.vvp lin_gen_tb.sv pe_lin_gen.sv pe.sv; vvp lin_gen_tb.vvp -vcd
+
 clean:
-	rm -f *.vvp
+	rm -f *.vvp; rm -f *.vcd

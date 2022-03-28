@@ -1,3 +1,5 @@
+`timescale 1ns/1ps
+
 module PE_TB;
 	reg clk, rstn, fire;
 	reg [7:0] w1, w2, w3, w4, a;
@@ -20,6 +22,7 @@ module PE_TB;
 		o1, o2, o3, o4);
 
 	initial begin
+		$dumpfile("lin_tb.vcd");
 		clk <= 0;
 		rstn <= 0;
 		cnt <= 0;
@@ -51,6 +54,9 @@ module PE_TB;
 			$display("i=%d\tout=%d,%d,%d,%d",i,o1,o2,o3,o4);
 		end
 
+		$dumpvars(0, PE_TB);
+		$dumpall;
+		$dumpflush;
 		$finish;
 	end
 endmodule
