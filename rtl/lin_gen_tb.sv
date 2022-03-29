@@ -4,7 +4,7 @@ module PE_TB;
 	reg clk, rstn, fire;
 	reg [7:0] w [0:3];
 	wire [11:0] o [0:3];
-    reg [7:0] a;
+    	reg [7:0] a;
 	reg [7:0] cnt;
 
 	integer i;
@@ -23,15 +23,13 @@ module PE_TB;
 
 	initial begin
         $dumpfile("lin_gen_tb.vcd");
-
 		clk <= 0;
 		rstn <= 0;
-		cnt <= 0;
 		a <= 1;
 		fire <= 1;
-        for (i=0; i<4; i=i+1) begin
-            w[i] <= i;
-        end
+        	for (i=0; i<4; i=i+1) begin
+    	        	w[i] <= i;
+        	end
 
 		$display("Initialized");
 

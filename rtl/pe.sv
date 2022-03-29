@@ -1,18 +1,12 @@
-
-
 module PE (
 	input clk, 
 	input rstn,
 	input fire, 
-	input[7:0] in_w, 
-	input[7:0] in_a, 
-	output out_f,
-	output[7:0] out_a,
-	output[11:0] out);
-
-	reg out_f;
-	reg[7:0] out_a;
-	reg[11:0] out;
+	input [7:0] in_w, 
+	input [7:0] in_a, 
+	output reg out_f,
+	output reg [7:0] out_a,
+	output reg [11:0] out);
 	
 	always_ff @ (posedge clk) begin
 		if (!rstn) begin
