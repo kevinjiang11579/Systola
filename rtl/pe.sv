@@ -6,6 +6,7 @@ module PE (
 	input [7:0] in_a, 
 	output reg out_f,
 	output reg [7:0] out_a,
+	output reg [7:0] out_w,
 	output reg [11:0] out);
 	
 	always_ff @ (posedge clk) begin

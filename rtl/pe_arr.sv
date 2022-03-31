@@ -1,47 +1,72 @@
-module PE_lin(
-    input clk,
+module PE_lin 
+    #(
+    parameter rows = 4,
+    parameter cols = 4) 
+    (
+    input clk, 
     input rstn,
     input fire,
-    input[7:0] in_w [3:0],
-    input[7:0] in_a [3:0],
-    output[11:0] outs [3:0]);
-
-    wire fo0[3:0];
-    wire fo1[3:0];
-    wire fo2[3:0];
-    wire fo3[3:0];
-
-    wire[7:0] ao0[3:0];
-    wire[7:0] ao1[3:0];
-    wire[7:0] ao2[3:0];
-    wire[7:0] ao3[3:0];
-
-    wire[11:0] o0[3:0];
-    wire[11:0] o1[3:0];
-    wire[11:0] o2[3:0];
-    wire[11:0] o3[3:0];
-
-    
-    assign outs = o0;
+    input[7:0] in_w [0:rows-1],
+    input[7:0] in_a [0:cols-1],
+    output wire [11:0] outs [0:(rows*cols)-1]);
 
     genvar i, j;
     generate
-        parameter rows = 4;
-        parameter cols = 4;
-        wire [7:0] peouts [rows * columns];
+        wire [11:0] res_o [0:(rows * cols)-1];
+        wire [7:0] w_o [0:(rows * cols)-1];
+        wire [7:0] a_o [0:(rows * cols)-1];
+        wire f_o [0:(rows * cols)-1];
+
+        // may need to change
+        assign outs = res_o;
+
         for (i=0; i<rows; i=i+1) begin
             for (j=0; j<cols; j=j+1) begin
-                if (j == 0) begin
-                    PE PE00 (.clk(clk), .rstn(rstn), .fire(fire), 
-                    .in_w(in_w[0]), .in_a(in_a), 
-                    .out_f(fo0[0]), .out_a(ao0[0]), .out(o0[0]));
-                end else begin
-                    PE PE0 (.clk(clk), .rstn(rstn), .fire(fo0[j-1]),
-                    .in_w(in_w[j]), .in_a(ao0[j-1]), 
-                    .out_f(fo0[j]), .out_a(ao0[j]), .out(o0[j]));
+
+                if (j == 0) begin // First Column
+                    if(i == 0) begin // Only for top left PE
+                        PE PEL (.clk(clk), .rstn(rstn), 
+                        .fire(fire), 
+                        .in_w(in_w[0]), 
+                        .in_a(in_a[0]), 
+                        .out_f(f_o[0]), 
+                        .out_a(a_o[0]), 
+                        .out_w(w_o[0]), 
+                        .out(res_o[0]));
+                    end else begin  // Rest of first column
+                        PE PEL (.clk(clk), .rstn(rstn), 
+                        .fire(f_o[j + i*(cols-1)]), 
+                        .in_w(a_o[j + i*(cols-1)]), 
+                        .in_a(in_a[i]), 
+                        .out_f(f_o[j + i*cols]), 
+                        .out_a(a_o[j + i*cols]), 
+                        .out_w(w_o[j + i*cols]), 
+                        .out(res_o[j + i*cols]));
+                    end
+                end else begin // Not first column
+
+                    if(i == 0) begin // First Row
+                        PE PER (.clk(clk), .rstn(rstn), 
+                        .fire(f_o[j + i*cols - 1]), 
+                        .in_w(in_w[j]), 
+                        .in_a(in_a[j - 1]), 
+                        .out_f(f_o[j + i*cols]), 
+                        .out_a(a_o[j + i*cols]), 
+                        .out_w(w_o[j + i*cols]), 
+                        .out(res_o[j + i*cols]));
+                    end else begin // Not first row, not first column
+                        PE PER (.clk(clk), .rstn(rstn), 
+                        .fire(f_o[j + i*cols - 1]), 
+                        .in_w(w_o[j + i*(cols-1)]), 
+                        .in_a(a_o[j + i*cols - 1]), 
+                        .out_f(f_o[j + i*cols]), 
+                        .out_a(a_o[j + i*cols]), 
+                        .out_w(w_o[j + i*cols]), 
+                        .out(res_o[j + i*cols]));
+                    end
                 end
+
             end
         end
     endgenerate
-
-)
+endmodule

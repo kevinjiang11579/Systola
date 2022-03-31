@@ -16,5 +16,8 @@ lin_gen:
 test_lin_gen:
 	iverilog -g2012 -o lin_gen_tb.vvp lin_gen_tb.sv pe_lin_gen.sv pe.sv; vvp lin_gen_tb.vvp -vcd
 
+arr:
+	iverilog -g2012 -o arr.vvp pe.sv pe_arr.sv
+
 clean:
 	rm -f *.vvp; rm -f *.vcd
