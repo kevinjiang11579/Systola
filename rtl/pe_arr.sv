@@ -28,7 +28,7 @@ module PE_lin(
     generate
         parameter rows = 4;
         parameter cols = 4;
-        wire
+        wire [7:0] peouts [rows * columns];
         for (i=0; i<rows; i=i+1) begin
             for (j=0; j<cols; j=j+1) begin
                 if (j == 0) begin
