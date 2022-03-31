@@ -1,4 +1,4 @@
-module PE_lin 
+module PE_ARR
     #(
     parameter rows = 4,
     parameter cols = 4) 
@@ -43,8 +43,8 @@ module PE_lin
                         .out_w(w_o[j + i*cols]), 
                         .out(res_o[j + i*cols]));
                     end
-                end else begin // Not first column
 
+                end else begin // Not first column
                     if(i == 0) begin // First Row
                         PE PER (.clk(clk), .rstn(rstn), 
                         .fire(f_o[j + i*cols - 1]), 
