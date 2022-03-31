@@ -1,11 +1,11 @@
-/home/esp2022/bh2803/esp/Systola/rtl/lin_gen_tb.sv {1 {vlog -work work -vopt -sv -stats=none /home/esp2022/bh2803/esp/Systola/rtl/lin_gen_tb.sv
+/home/esp2022/bh2803/esp/Systola/rtl/pe_arr.sv {0 {vlog -work work -vopt -sv -stats=none /home/esp2022/bh2803/esp/Systola/rtl/pe_arr.sv
 Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 16 2019
--- Compiling module PE_TB
+-- Compiling module PE_lin
+** Error: /home/esp2022/bh2803/esp/Systola/rtl/pe_arr.sv(27): (vlog-2730) Undefined variable: 'fo'.
+** Error: /home/esp2022/bh2803/esp/Systola/rtl/pe_arr.sv(27): (vlog-2730) Undefined variable: 'o'.
+** Error: (vlog-13069) /home/esp2022/bh2803/esp/Systola/rtl/pe_arr.sv(39): near ")": syntax error, unexpected ')'.
 
-Top level modules:
-	PE_TB
-
-} {} {}} /home/esp2022/bh2803/esp/Systola/rtl/pe.sv {1 {vlog -work work -vopt -sv -stats=none /home/esp2022/bh2803/esp/Systola/rtl/pe.sv
+} {4.0 7.0} {}} /home/esp2022/bh2803/esp/Systola/rtl/pe.sv {1 {vlog -work work -vopt -sv -stats=none /home/esp2022/bh2803/esp/Systola/rtl/pe.sv
 Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 16 2019
 -- Compiling module PE
 
