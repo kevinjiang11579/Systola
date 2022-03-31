@@ -4,7 +4,7 @@ module PE_TB;
     reg clk, rstn, fire;
     reg [7:0] w [0:3];
     wire [11:0] o [0:3];
-        reg [7:0] a [0:3];
+    reg [7:0] a [0:3];
     reg [7:0] cnt;
 
     integer i;
