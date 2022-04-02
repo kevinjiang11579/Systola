@@ -36,7 +36,7 @@ module PE_ARR
                     end else begin  // Rest of first column
                         PE PEL (.clk(clk), .rstn(rstn), 
                         .fire(f_o[j + i*(cols-1)]), 
-                        .in_w(a_o[j + i*(cols-1)]), 
+                        .in_w(w_o[j + i*(cols-1)]), 
                         .in_a(in_a[i]), 
                         .out_f(f_o[j + i*cols]), 
                         .out_a(a_o[j + i*cols]), 
