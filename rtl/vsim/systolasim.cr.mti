@@ -19,6 +19,13 @@ Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 16 2019
 Top level modules:
 	PE_TB
 
+} {} {}} /home/esp2022/bh2803/esp/Systola/rtl/pe_arr_tb.sv {1 {vlog -work work -vopt -sv -stats=none /home/esp2022/bh2803/esp/Systola/rtl/pe_arr_tb.sv
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 16 2019
+-- Compiling module pe_arr_tb
+
+Top level modules:
+	pe_arr_tb
+
 } {} {}} /home/esp2022/bh2803/esp/Systola/rtl/pe_lin_gen.sv {1 {vlog -work work -vopt -sv -stats=none /home/esp2022/bh2803/esp/Systola/rtl/pe_lin_gen.sv
 Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 16 2019
 -- Compiling module PE_Lin_gen

@@ -14,133 +14,176 @@ T_opt
 VPakBe0ZhbK0]XCd4bN@^d2
 04 5 4 work PE_TB fast 0
 =1-42010a960011-6242ba8f-c4a90-4268
-o-quiet -auto_acc_if_foreign -work work +acc
-Z1 tCvgOpt 0
+Z1 o-quiet -auto_acc_if_foreign -work work +acc
+Z2 tCvgOpt 0
 n@_opt
-OL;O;2019.2;69
+Z3 OL;O;2019.2;69
 R0
+T_opt1
+!s110 1648926837
+V`QK1m<K53?WfkmC3^L5do1
+04 6 4 work PE_ARR fast 0
+=1-42010a960011-6248a074-bcb79-283f
+R1
+R2
+n@_opt1
+R3
+R0
+T_opt2
+!s110 1648929754
+V:8zhh2=zWI3193Eio00Wo1
+04 9 4 work pe_arr_tb fast 0
+=1-42010a960011-6248abda-36334-6de9
+R1
+R2
+n@_opt2
+R3
 vPE
-Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z3 !s110 1648767812
+Z4 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+!s110 1648926818
 !i10b 1
 !s100 _bNJLT3fhkZSm7JKK8Zb;0
 !s11b <iCiBl9b[k?Yd6^Bi<o;I3
 IAfRYPRVY83n2K=9iJD]2k1
-Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-Z5 w1648757469
+Z6 w1648757469
 8/home/esp2022/bh2803/esp/Systola/rtl/pe.sv
 F/home/esp2022/bh2803/esp/Systola/rtl/pe.sv
 L0 1
-Z6 OL;L;2019.2;69
+Z7 OL;L;2019.2;69
 r1
 !s85 0
 31
-Z7 !s108 1648767812.000000
+!s108 1648926818.000000
 !s107 /home/esp2022/bh2803/esp/Systola/rtl/pe.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/esp2022/bh2803/esp/Systola/rtl/pe.sv|
 !i113 0
 Z8 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R1
+R2
 n@p@e
 vPE_ARR
-R2
-!s110 1648768009
+R4
+!s110 1648926812
 !i10b 1
 !s100 Vk5CP9YJ>j;YNgQ3O=Ci>3
 Z9 !s11b J^bgeh2BjUf_I6:gdBFP:0
 Ia_:A5UN]JTY3nn3HMGL190
-R4
+R5
 S1
 R0
 w1648767988
 Z10 8/home/esp2022/bh2803/esp/Systola/rtl/pe_arr.sv
 Z11 F/home/esp2022/bh2803/esp/Systola/rtl/pe_arr.sv
 L0 1
-R6
+R7
 r1
 !s85 0
 31
-!s108 1648768009.000000
+!s108 1648926812.000000
 Z12 !s107 /home/esp2022/bh2803/esp/Systola/rtl/pe_arr.sv|
 Z13 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/esp2022/bh2803/esp/Systola/rtl/pe_arr.sv|
 !i113 0
 R8
-R1
-n@p@e_@a@r@r
-vPE_lin
 R2
-R3
+n@p@e_@a@r@r
+vpe_arr_tb
+R4
+!s110 1648929737
+!i10b 1
+!s100 H8kLBhaX93Jo5hkR2JlX11
+!s11b H44IABXDi`=QVQYCOG>F=1
+I9UlcEYFk:EkT`hT`a>6oh0
+R5
+S1
+R0
+w1648929732
+8/home/esp2022/bh2803/esp/Systola/rtl/pe_arr_tb.sv
+F/home/esp2022/bh2803/esp/Systola/rtl/pe_arr_tb.sv
+L0 3
+R7
+r1
+!s85 0
+31
+!s108 1648929737.000000
+!s107 /home/esp2022/bh2803/esp/Systola/rtl/pe_arr_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/esp2022/bh2803/esp/Systola/rtl/pe_arr_tb.sv|
+!i113 0
+R8
+R2
+vPE_lin
+R4
+Z14 !s110 1648767812
 !i10b 1
 !s100 mDc^goNhP4kmiMcz0zX:@1
 R9
 IdGYcQbJ1J>i13cZYkz47h3
-R4
+R5
 S1
 R0
 w1648759363
 R10
 R11
 L0 1
-R6
+R7
 r1
 !s85 0
 31
-R7
+Z15 !s108 1648767812.000000
 R12
 R13
 !i113 0
 R8
-R1
+R2
 n@p@e_lin
 vPE_Lin_gen
-R2
-R3
+R4
+R14
 !i10b 1
 !s100 zmcZDj6lM@4E7ABdAR`Z:0
 !s11b DLCSWebol61MChW1Bh[bI1
 I`GNM7jo<oWdMC^H?^E0?U1
-R4
+R5
 S1
 R0
 w1648540274
 8/home/esp2022/bh2803/esp/Systola/rtl/pe_lin_gen.sv
 F/home/esp2022/bh2803/esp/Systola/rtl/pe_lin_gen.sv
 L0 1
-R6
+R7
 r1
 !s85 0
 31
-R7
+R15
 !s107 /home/esp2022/bh2803/esp/Systola/rtl/pe_lin_gen.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/esp2022/bh2803/esp/Systola/rtl/pe_lin_gen.sv|
 !i113 0
 R8
-R1
+R2
 n@p@e_@lin_gen
 vPE_TB
-R2
-R3
+R4
+R14
 !i10b 1
 !s100 NO<Kk0IBcHVS=`CagibiZ3
 !s11b eT>Tg:`>[O0EVXfVT07Kl1
 I1aLI8NA@hg3<AkRiERAR70
-R4
+R5
 S1
 R0
-R5
+R6
 8/home/esp2022/bh2803/esp/Systola/rtl/lin_gen_tb.sv
 F/home/esp2022/bh2803/esp/Systola/rtl/lin_gen_tb.sv
 L0 3
-R6
+R7
 r1
 !s85 0
 31
-R7
+R15
 !s107 /home/esp2022/bh2803/esp/Systola/rtl/lin_gen_tb.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/esp2022/bh2803/esp/Systola/rtl/lin_gen_tb.sv|
 !i113 0
 R8
-R1
+R2
 n@p@e_@t@b
