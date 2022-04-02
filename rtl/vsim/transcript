@@ -11,39 +11,18 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-# Loading project systolasim
-# Compile of pe_arr_tb.sv failed with 1 errors.
-# Compile of pe_arr_tb.sv failed with 1 errors.
-# Compile of pe_arr_tb.sv failed with 1 errors.
-# Compile of pe_arr_tb.sv was successful.
 vsim -voptargs=+acc work.pe_arr_tb
 # vsim -voptargs="+acc" work.pe_arr_tb 
-# Start time: 15:54:13 on Apr 02,2022
+# Start time: 16:45:19 on Apr 02,2022
 # ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vsim-8611) Generating debug db.
 # Loading sv_std.std
 # Loading work.pe_arr_tb(fast)
 # Loading work.PE_ARR(fast)
 # Loading work.PE(fast)
-add wave -position insertpoint sim:/pe_arr_tb/*
+# ** Note: (vsim-8900) Creating design debug database vsim.dbg.
+add schematic -full sim:/pe_arr_tb
+add wave -position insertpoint {sim:/pe_arr_tb/dut/genblk1[1]/genblk1[0]/genblk1/genblk1/PEL/*}
 run
-run
-run
-# ** Note: $stop    : /home/esp2022/bh2803/esp/Systola/rtl/pe_arr_tb.sv(34)
-#    Time: 500 ns  Iteration: 0  Instance: /pe_arr_tb
-# Break in Module pe_arr_tb at /home/esp2022/bh2803/esp/Systola/rtl/pe_arr_tb.sv line 34
-# Compile of pe_arr_tb.sv was successful.
-vsim -voptargs=+acc work.pe_arr_tb
-# End time: 16:02:34 on Apr 02,2022, Elapsed time: 0:08:21
-# Errors: 84, Warnings: 0
-# vsim -voptargs="+acc" work.pe_arr_tb 
-# Start time: 16:02:34 on Apr 02,2022
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading sv_std.std
-# Loading work.pe_arr_tb(fast)
-# Loading work.PE_ARR(fast)
-# Loading work.PE(fast)
-add wave -position insertpoint sim:/pe_arr_tb/*
-run
-# Break key hit
-# End time: 16:11:00 on Apr 02,2022, Elapsed time: 0:08:26
-# Errors: 51, Warnings: 0
+# End time: 16:51:49 on Apr 02,2022, Elapsed time: 0:06:30
+# Errors: 8, Warnings: 0
