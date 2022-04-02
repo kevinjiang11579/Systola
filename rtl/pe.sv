@@ -12,12 +12,14 @@ module PE (
 	always_ff @ (posedge clk) begin
 		if (!rstn) begin
 			out_a <= 0;
+			out_w <= 0;
 			out_f <= 0;
 			out <= 0;
 		end else begin
 			if (fire) begin
 				out <= out + (in_w * in_a);
 				out_a <= in_a;
+				out_w <= in_w;
 			end
 			out_f <= fire;
 		end
