@@ -6,9 +6,9 @@ integer i;
 reg clk;
 reg rstn;
 reg fire;
-reg[7:0] in_w [0:rows - 1];
-reg[7:0] in_a [0:cols - 1];
-wire[11:0] outs[0:(rows * cols) - 1];
+reg[7:0] in_w [0:3];
+reg[7:0] in_a [0:3];
+wire[11:0] outs[0:15];
 
 PE_ARR u0 #(4,4)
            (clk, rstn, fire, in_w, in_a, outs);
