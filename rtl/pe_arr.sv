@@ -35,8 +35,8 @@ module PE_ARR
                         .out(res_o[0]));
                     end else begin  // Rest of first column
                         PE PEL (.clk(clk), .rstn(rstn), 
-                        .fire(f_o[j + i*(cols-1)]), 
-                        .in_w(w_o[j + i*(cols-1)]), 
+                        .fire(f_o[j + (i-1)*cols]), 
+                        .in_w(w_o[j + (i-1)*cols]), 
                         .in_a(in_a[i]), 
                         .out_f(f_o[j + i*cols]), 
                         .out_a(a_o[j + i*cols]), 
@@ -57,7 +57,7 @@ module PE_ARR
                     end else begin // Not first row, not first column
                         PE PER (.clk(clk), .rstn(rstn), 
                         .fire(f_o[j + i*cols - 1]), 
-                        .in_w(w_o[j + i*(cols-1)]), 
+                        .in_w(w_o[j + (i-1)*cols)]), 
                         .in_a(a_o[j + i*cols - 1]), 
                         .out_f(f_o[j + i*cols]), 
                         .out_a(a_o[j + i*cols]), 
