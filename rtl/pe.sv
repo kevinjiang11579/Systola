@@ -1,3 +1,5 @@
+`timescale 1 ns/1 ps
+
 module PE (
 	input clk, 
 	input rstn,
