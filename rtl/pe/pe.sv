@@ -11,7 +11,7 @@ module PE (
 	output reg [7:0] out_w,
 	output reg [11:0] out);
 	
-	always_ff@(posedge clk) begin
+	always_ff @ (posedge clk) begin
 		if (!rstn) begin
 			out_a <= 0;
 			out_w <= 0;
