@@ -39,7 +39,7 @@ end
 initial
 begin
 
-// File Configuration
+    // File Configuration
     weights_in_file = $fopen(`WEIGHTS_IN_FN, "r");
     activations_in_file = $fopen(`ACTIVATIONS_IN_FN, "r");
     //python_out_file = $fopen(`PYTHON_OUT_FN, "r");
