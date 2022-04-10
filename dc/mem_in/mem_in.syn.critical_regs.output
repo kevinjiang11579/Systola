@@ -1,0 +1,27 @@
+ 
+****************************************
+Report : timing
+        -path end
+        -delay max
+        -max_paths 10000
+        -sort_by slack
+Design : mem_in
+Version: O-2018.06-SP5-1
+Date   : Sun Apr 10 10:54:19 2022
+****************************************
+
+Operating Conditions: tt_1p2v_25c   Library: scx3_cmos8rf_lpvt_tt_1p2v_25c
+Wire Load Model Mode: top
+
+Endpoint                         Path Delay     Path Required     Slack
+------------------------------------------------------------------------
+Q[1] (out)                          3.95 f            3.95         0.00
+Q[7] (out)                          3.94 f            3.95         0.01
+Q[4] (out)                          3.93 r            3.95         0.02
+Q[3] (out)                          3.93 r            3.95         0.02
+Q[2] (out)                          3.93 r            3.95         0.02
+Q[5] (out)                          3.92 f            3.95         0.03
+Q[6] (out)                          3.91 f            3.95         0.04
+Q[0] (out)                          3.91 r            3.95         0.04
+
+1

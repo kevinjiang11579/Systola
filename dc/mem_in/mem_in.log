@@ -1,0 +1,593 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+              Version O-2018.06-SP5-1 for linux64 - Mar 08, 2019 
+
+                    Copyright (c) 1988 - 2019 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+#########################################
+# TCL script for Design Compiler        #
+# MS 2015                               #
+#########################################
+#########################################
+# READ Design and Library               #
+#########################################
+set top_level mem_in
+mem_in
+source -verbose "../common_script/common.tcl"
+. /courses/ee6321/share/ibm13rflpvt/synopsys/
+dw_foundation.sldb
+* scx3_cmos8rf_lpvt_tt_1p2v_25c.db dw_foundation.sldb ../../lib2db/mem8_tt_1p2v_25c_syn.db
+/courses/ee6321/share/ibm13rflpvt/synopsys/scx3_cmos8rf_lpvt_tt_1p2v_25c.db
+/courses/ee6321/share/ibm13rflpvt/synopsys/scx3_cmos8rf_lpvt_tt_1p2v_25c.db
+read_verilog {../../rtl/$top_level/$top_level.v}
+Loading db file '/courses/ee6321/share/ibm13rflpvt/synopsys/scx3_cmos8rf_lpvt_tt_1p2v_25c.db'
+Loading db file '/tools/synopsys/syn/O-2018.06-SP5-1/libraries/syn/dw_foundation.sldb'
+Loading db file '/homes/user/stud/fall21/kyj2112/Systola_kevin/lib2db/mem8_tt_1p2v_25c_syn.db'
+Loading db file '/tools/synopsys/syn/O-2018.06-SP5-1/libraries/syn/gtech.db'
+Loading db file '/tools/synopsys/syn/O-2018.06-SP5-1/libraries/syn/standard.sldb'
+  Loading link library 'scx3_cmos8rf_lpvt_tt_1p2v_25c'
+  Loading link library 'USERLIB'
+  Loading link library 'gtech'
+Loading verilog file '/homes/user/stud/fall21/kyj2112/Systola_kevin/rtl/mem_in/mem_in.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /homes/user/stud/fall21/kyj2112/Systola_kevin/rtl/mem_in/mem_in.v
+Warning:  /homes/user/stud/fall21/kyj2112/Systola_kevin/rtl/mem_in/mem_in.v:29: signed to unsigned assignment occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine mem_in line 33 in file
+		'/homes/user/stud/fall21/kyj2112/Systola_kevin/rtl/mem_in/mem_in.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      A_out_reg      | Flip-flop |   7   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+======================================================
+| block name/line  | Inputs | Outputs | # sel inputs |
+======================================================
+|    mem_in/24     |  128   |    8    |      7       |
+======================================================
+Presto compilation completed successfully.
+Current design is now '/homes/user/stud/fall21/kyj2112/Systola_kevin/rtl/mem_in/mem_in.db:mem_in'
+Loaded 1 design.
+Current design is 'mem_in'.
+mem_in
+set set_fix_multiple_port_nets "true"
+true
+list_designs
+mem_in (*)
+1
+if { [check_error -v] == 1 } { exit 1 }
+#########################################
+# Design Constraints                    #
+#########################################
+current_design $top_level
+Current design is 'mem_in'.
+{mem_in}
+link
+
+  Linking design 'mem_in'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  mem_in                      /homes/user/stud/fall21/kyj2112/Systola_kevin/rtl/mem_in/mem_in.db
+  scx3_cmos8rf_lpvt_tt_1p2v_25c (library) /courses/ee6321/share/ibm13rflpvt/synopsys/scx3_cmos8rf_lpvt_tt_1p2v_25c.db
+  dw_foundation.sldb (library) /tools/synopsys/syn/O-2018.06-SP5-1/libraries/syn/dw_foundation.sldb
+  USERLIB (library)           /homes/user/stud/fall21/kyj2112/Systola_kevin/lib2db/mem8_tt_1p2v_25c_syn.db
+
+1
+check_design
+1
+source -verbose "./timing.tcl"
+4.00
+0
+0.010
+0.05
+0.05
+0.005
+1
+1
+1
+1
+1
+1
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+1
+1
+1
+1
+1
+1
+set_max_capacitance 0.005 [all_inputs]
+1
+set_max_fanout 4 $top_level
+1
+set_max_fanout 4 [all_inputs]
+1
+set_max_area 0 
+1
+set_fix_multiple_port_nets -all -buffer_constants
+1
+#########################################
+# Compile                               #
+#########################################
+check_design
+1
+#uniquify
+current_design $top_level
+Current design is 'mem_in'.
+{mem_in}
+link
+
+  Linking design 'mem_in'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  mem_in                      /homes/user/stud/fall21/kyj2112/Systola_kevin/rtl/mem_in/mem_in.db
+  scx3_cmos8rf_lpvt_tt_1p2v_25c (library)
+                              /courses/ee6321/share/ibm13rflpvt/synopsys/scx3_cmos8rf_lpvt_tt_1p2v_25c.db
+  dw_foundation.sldb (library)
+                              /tools/synopsys/syn/O-2018.06-SP5-1/libraries/syn/dw_foundation.sldb
+  USERLIB (library)           /homes/user/stud/fall21/kyj2112/Systola_kevin/lib2db/mem8_tt_1p2v_25c_syn.db
+
+1
+compile_ultra
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | O-2018.06-DWBB_201806.5 |     *     |
+| Licensed DW Building Blocks        | O-2018.06-DWBB_201806.5 |     *     |
+============================================================================
+
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+  Simplifying Design 'mem_in'
+
+Loaded alib file './alib-52/scx3_cmos8rf_lpvt_tt_1p2v_25c.db.alib'
+  Building model 'DW01_NAND2'
+Information: Ungrouping 0 of 1 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'mem_in'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'HOLDX1TS' in the library 'scx3_cmos8rf_lpvt_tt_1p2v_25c' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:07 2807818.2      0.15       0.6     235.1                           5492220.0000      0.00  
+    0:00:07 2807826.8      0.00       0.0     248.1                           5492225.5000      0.00  
+    0:00:07 2807826.8      0.00       0.0     248.1                           5492225.5000      0.00  
+    0:00:07 2807808.1      0.00       0.0     246.1                           5492205.0000      0.00  
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:08 2807677.1      0.00       0.0     245.1                           5492027.5000      0.00  
+    0:00:08 2807641.1      0.00       0.0     245.1                           5491987.5000      0.00  
+    0:00:08 2807641.1      0.00       0.0     245.1                           5491987.5000      0.00  
+    0:00:08 2807641.1      0.00       0.0     245.1                           5491987.5000      0.00  
+    0:00:08 2807641.1      0.00       0.0     245.1                           5491987.5000      0.00  
+    0:00:08 2807641.1      0.00       0.0     245.1                           5491987.5000      0.00  
+    0:00:08 2807641.1      0.00       0.0     245.1                           5491987.5000      0.00  
+    0:00:08 2807641.1      0.00       0.0     245.1                           5491987.5000      0.00  
+    0:00:08 2807641.1      0.00       0.0     245.1                           5491987.5000      0.00  
+    0:00:08 2807641.1      0.00       0.0     245.1                           5491987.5000      0.00  
+    0:00:08 2807641.1      0.00       0.0     245.1                           5491987.5000      0.00  
+    0:00:08 2807641.1      0.00       0.0     245.1                           5491987.5000      0.00  
+    0:00:08 2807641.1      0.00       0.0     245.1                           5491987.5000      0.00  
+    0:00:08 2807641.1      0.00       0.0     245.1                           5491987.5000      0.00  
+    0:00:08 2807641.1      0.00       0.0     245.1                           5491987.5000      0.00  
+    0:00:08 2807641.1      0.00       0.0     245.1                           5491987.5000      0.00  
+    0:00:08 2807641.1      0.00       0.0     245.1                           5491987.5000      0.00  
+    0:00:08 2807641.1      0.00       0.0     245.1                           5491987.5000      0.00  
+    0:00:08 2807641.1      0.00       0.0     245.1                           5491987.5000      0.00  
+    0:00:08 2807641.1      0.00       0.0     245.1                           5491987.5000      0.00  
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_fanout)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:08 2807641.1      0.00       0.0     245.1                           5491987.5000      0.00  
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+    0:00:08 2808309.2      0.00       0.0       0.0                           5492433.5000      0.00  
+    0:00:08 2808309.2      0.00       0.0       0.0                           5492433.5000      0.00  
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:08 2808309.2      0.00       0.0       0.0                           5492433.5000      0.00  
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+  Global Optimization (Phase 44)
+  Global Optimization (Phase 45)
+  Global Optimization (Phase 46)
+  Global Optimization (Phase 47)
+  Global Optimization (Phase 48)
+  Global Optimization (Phase 49)
+  Global Optimization (Phase 50)
+    0:00:09 2808127.8      0.00       0.0       0.0                           5492201.0000      0.00  
+    0:00:09 2808127.8      0.00       0.0       0.0                           5492201.0000      0.00  
+    0:00:09 2808127.8      0.00       0.0       0.0                           5492201.0000      0.00  
+    0:00:09 2808119.2      0.00       0.0       0.0                           5492190.0000      0.00  
+    0:00:09 2808119.2      0.00       0.0       0.0                           5492190.0000      0.00  
+    0:00:09 2808119.2      0.00       0.0       0.0                           5492190.0000      0.00  
+    0:00:09 2808119.2      0.00       0.0       0.0                           5492190.0000      0.00  
+    0:00:09 2808119.2      0.00       0.0       0.0                           5492190.0000      0.00  
+    0:00:09 2808119.2      0.00       0.0       0.0                           5492190.0000      0.00  
+    0:00:09 2808119.2      0.00       0.0       0.0                           5492190.0000      0.00  
+    0:00:09 2808119.2      0.00       0.0       0.0                           5492190.0000      0.00  
+    0:00:09 2808119.2      0.00       0.0       0.0                           5492190.0000      0.00  
+    0:00:09 2808119.2      0.00       0.0       0.0                           5492190.0000      0.00  
+    0:00:09 2808119.2      0.00       0.0       0.0                           5492190.0000      0.00  
+    0:00:09 2808119.2      0.00       0.0       0.0                           5492190.0000      0.00  
+    0:00:09 2808119.2      0.00       0.0       0.0                           5492190.0000      0.00  
+    0:00:09 2808119.2      0.00       0.0       0.0                           5492190.0000      0.00  
+    0:00:09 2808119.2      0.00       0.0       0.0                           5492190.0000      0.00  
+    0:00:09 2808119.2      0.00       0.0       0.0                           5492190.0000      0.00  
+    0:00:09 2808119.2      0.00       0.0       0.0                           5492190.0000      0.00  
+    0:00:09 2808119.2      0.00       0.0       0.0                           5492190.0000      0.00  
+    0:00:09 2808119.2      0.00       0.0       0.0                           5492190.0000      0.00  
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:09 2808119.2      0.00       0.0       0.0                           5492190.0000      0.00  
+    0:00:10 2808112.0      0.00       0.0       0.0                           5492185.0000      0.00  
+    0:00:10 2808112.0      0.00       0.0       0.0                           5492185.0000      0.00  
+    0:00:10 2808112.0      0.00       0.0       0.0                           5492185.0000      0.00  
+    0:00:10 2808112.0      0.00       0.0       0.0                           5492185.0000      0.00  
+    0:00:10 2808101.9      0.00       0.0       0.0                           5492167.0000      0.00  
+    0:00:10 2808101.9      0.00       0.0       0.0                           5492167.0000      0.00  
+    0:00:10 2808101.9      0.00       0.0       0.0                           5492167.0000      0.00  
+    0:00:10 2808101.9      0.00       0.0       0.0                           5492167.0000      0.00  
+    0:00:10 2808091.8      0.00       0.0       0.0                           5492150.0000      0.00  
+Loading db file '/courses/ee6321/share/ibm13rflpvt/synopsys/scx3_cmos8rf_lpvt_tt_1p2v_25c.db'
+Loading db file '/homes/user/stud/fall21/kyj2112/Systola_kevin/lib2db/mem8_tt_1p2v_25c_syn.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated black box outputs. (PWR-428)
+1
+#########################################
+# Optimize design                       #
+# Some pointers for possible optimizatio# 
+# Check the DC reference manual         #
+#########################################
+#set_transform_for_retiming {temp_reg[6] temp_reg[5] temp_reg[4] temp_reg[3] temp_reg[2] temp_reg[1] temp_reg[0]} dont_retime
+#optimize_registers -clock clk -edge rise -justification_effort high 
+#balance_registers
+#source -verbose "../script/timing.1.2ns.tcl"
+#pipeline_design -stages 8 -clock_port_name $clk_name -check_design -verbose -print_critical_loop
+#set_max_capacitance 1 [all_inputs] 
+#compile_ultra -no_autoungroup -no_boundary_optimization
+#remove_clock -all
+#pipeline_design -stages 8 -clock_port_name $clk_name -async_reset reset -check_design -verbose -minimum_period_only
+#########################################
+# Write outputs                         #
+#########################################
+source -verbose "../common_script/namingrules.tcl"
+1
+
+Design          Type    Object                  New Name
+--------------------------------------------------------------------------------
+mem_in          cell    generate_mem_8[0].mem8_u generate_mem_8_0__mem8_u
+mem_in          cell    generate_mem_8[1].mem8_u generate_mem_8_1__mem8_u
+mem_in          cell    generate_mem_8[2].mem8_u generate_mem_8_2__mem8_u
+mem_in          cell    generate_mem_8[3].mem8_u generate_mem_8_3__mem8_u
+mem_in          cell    generate_mem_8[4].mem8_u generate_mem_8_4__mem8_u
+mem_in          cell    generate_mem_8[5].mem8_u generate_mem_8_5__mem8_u
+mem_in          cell    generate_mem_8[6].mem8_u generate_mem_8_6__mem8_u
+mem_in          cell    generate_mem_8[7].mem8_u generate_mem_8_7__mem8_u
+mem_in          cell    generate_mem_8[8].mem8_u generate_mem_8_8__mem8_u
+mem_in          cell    generate_mem_8[9].mem8_u generate_mem_8_9__mem8_u
+mem_in          cell    generate_mem_8[10].mem8_u generate_mem_8_10__mem8_u
+mem_in          cell    generate_mem_8[11].mem8_u generate_mem_8_11__mem8_u
+mem_in          cell    generate_mem_8[12].mem8_u generate_mem_8_12__mem8_u
+mem_in          cell    generate_mem_8[13].mem8_u generate_mem_8_13__mem8_u
+mem_in          cell    generate_mem_8[14].mem8_u generate_mem_8_14__mem8_u
+mem_in          cell    generate_mem_8[15].mem8_u generate_mem_8_15__mem8_u
+mem_in          cell    generate_mem_8[16].mem8_u generate_mem_8_16__mem8_u
+mem_in          cell    generate_mem_8[17].mem8_u generate_mem_8_17__mem8_u
+mem_in          cell    generate_mem_8[18].mem8_u generate_mem_8_18__mem8_u
+mem_in          cell    generate_mem_8[19].mem8_u generate_mem_8_19__mem8_u
+mem_in          cell    generate_mem_8[20].mem8_u generate_mem_8_20__mem8_u
+mem_in          cell    generate_mem_8[21].mem8_u generate_mem_8_21__mem8_u
+mem_in          cell    generate_mem_8[22].mem8_u generate_mem_8_22__mem8_u
+mem_in          cell    generate_mem_8[23].mem8_u generate_mem_8_23__mem8_u
+mem_in          cell    generate_mem_8[24].mem8_u generate_mem_8_24__mem8_u
+mem_in          cell    generate_mem_8[25].mem8_u generate_mem_8_25__mem8_u
+mem_in          cell    generate_mem_8[26].mem8_u generate_mem_8_26__mem8_u
+mem_in          cell    generate_mem_8[27].mem8_u generate_mem_8_27__mem8_u
+mem_in          cell    generate_mem_8[28].mem8_u generate_mem_8_28__mem8_u
+mem_in          cell    generate_mem_8[29].mem8_u generate_mem_8_29__mem8_u
+mem_in          cell    generate_mem_8[30].mem8_u generate_mem_8_30__mem8_u
+mem_in          cell    generate_mem_8[31].mem8_u generate_mem_8_31__mem8_u
+mem_in          cell    generate_mem_8[32].mem8_u generate_mem_8_32__mem8_u
+mem_in          cell    generate_mem_8[33].mem8_u generate_mem_8_33__mem8_u
+mem_in          cell    generate_mem_8[34].mem8_u generate_mem_8_34__mem8_u
+mem_in          cell    generate_mem_8[35].mem8_u generate_mem_8_35__mem8_u
+mem_in          cell    generate_mem_8[36].mem8_u generate_mem_8_36__mem8_u
+mem_in          cell    generate_mem_8[37].mem8_u generate_mem_8_37__mem8_u
+mem_in          cell    generate_mem_8[38].mem8_u generate_mem_8_38__mem8_u
+mem_in          cell    generate_mem_8[39].mem8_u generate_mem_8_39__mem8_u
+mem_in          cell    generate_mem_8[40].mem8_u generate_mem_8_40__mem8_u
+mem_in          cell    generate_mem_8[41].mem8_u generate_mem_8_41__mem8_u
+mem_in          cell    generate_mem_8[42].mem8_u generate_mem_8_42__mem8_u
+mem_in          cell    generate_mem_8[43].mem8_u generate_mem_8_43__mem8_u
+mem_in          cell    generate_mem_8[44].mem8_u generate_mem_8_44__mem8_u
+mem_in          cell    generate_mem_8[45].mem8_u generate_mem_8_45__mem8_u
+mem_in          cell    generate_mem_8[46].mem8_u generate_mem_8_46__mem8_u
+mem_in          cell    generate_mem_8[47].mem8_u generate_mem_8_47__mem8_u
+mem_in          cell    generate_mem_8[48].mem8_u generate_mem_8_48__mem8_u
+mem_in          cell    generate_mem_8[49].mem8_u generate_mem_8_49__mem8_u
+mem_in          cell    generate_mem_8[50].mem8_u generate_mem_8_50__mem8_u
+mem_in          cell    generate_mem_8[51].mem8_u generate_mem_8_51__mem8_u
+mem_in          cell    generate_mem_8[52].mem8_u generate_mem_8_52__mem8_u
+mem_in          cell    generate_mem_8[53].mem8_u generate_mem_8_53__mem8_u
+mem_in          cell    generate_mem_8[54].mem8_u generate_mem_8_54__mem8_u
+mem_in          cell    generate_mem_8[55].mem8_u generate_mem_8_55__mem8_u
+mem_in          cell    generate_mem_8[56].mem8_u generate_mem_8_56__mem8_u
+mem_in          cell    generate_mem_8[57].mem8_u generate_mem_8_57__mem8_u
+mem_in          cell    generate_mem_8[58].mem8_u generate_mem_8_58__mem8_u
+mem_in          cell    generate_mem_8[59].mem8_u generate_mem_8_59__mem8_u
+mem_in          cell    generate_mem_8[60].mem8_u generate_mem_8_60__mem8_u
+mem_in          cell    generate_mem_8[61].mem8_u generate_mem_8_61__mem8_u
+mem_in          cell    generate_mem_8[62].mem8_u generate_mem_8_62__mem8_u
+mem_in          cell    generate_mem_8[63].mem8_u generate_mem_8_63__mem8_u
+mem_in          cell    generate_mem_8[64].mem8_u generate_mem_8_64__mem8_u
+mem_in          cell    generate_mem_8[65].mem8_u generate_mem_8_65__mem8_u
+mem_in          cell    generate_mem_8[66].mem8_u generate_mem_8_66__mem8_u
+mem_in          cell    generate_mem_8[67].mem8_u generate_mem_8_67__mem8_u
+mem_in          cell    generate_mem_8[68].mem8_u generate_mem_8_68__mem8_u
+mem_in          cell    generate_mem_8[69].mem8_u generate_mem_8_69__mem8_u
+mem_in          cell    generate_mem_8[70].mem8_u generate_mem_8_70__mem8_u
+mem_in          cell    generate_mem_8[71].mem8_u generate_mem_8_71__mem8_u
+mem_in          cell    generate_mem_8[72].mem8_u generate_mem_8_72__mem8_u
+mem_in          cell    generate_mem_8[73].mem8_u generate_mem_8_73__mem8_u
+mem_in          cell    generate_mem_8[74].mem8_u generate_mem_8_74__mem8_u
+mem_in          cell    generate_mem_8[75].mem8_u generate_mem_8_75__mem8_u
+mem_in          cell    generate_mem_8[76].mem8_u generate_mem_8_76__mem8_u
+mem_in          cell    generate_mem_8[77].mem8_u generate_mem_8_77__mem8_u
+mem_in          cell    generate_mem_8[78].mem8_u generate_mem_8_78__mem8_u
+mem_in          cell    generate_mem_8[79].mem8_u generate_mem_8_79__mem8_u
+mem_in          cell    generate_mem_8[80].mem8_u generate_mem_8_80__mem8_u
+mem_in          cell    generate_mem_8[81].mem8_u generate_mem_8_81__mem8_u
+mem_in          cell    generate_mem_8[82].mem8_u generate_mem_8_82__mem8_u
+mem_in          cell    generate_mem_8[83].mem8_u generate_mem_8_83__mem8_u
+mem_in          cell    generate_mem_8[84].mem8_u generate_mem_8_84__mem8_u
+mem_in          cell    generate_mem_8[85].mem8_u generate_mem_8_85__mem8_u
+mem_in          cell    generate_mem_8[86].mem8_u generate_mem_8_86__mem8_u
+mem_in          cell    generate_mem_8[87].mem8_u generate_mem_8_87__mem8_u
+mem_in          cell    generate_mem_8[88].mem8_u generate_mem_8_88__mem8_u
+mem_in          cell    generate_mem_8[89].mem8_u generate_mem_8_89__mem8_u
+mem_in          cell    generate_mem_8[90].mem8_u generate_mem_8_90__mem8_u
+mem_in          cell    generate_mem_8[91].mem8_u generate_mem_8_91__mem8_u
+mem_in          cell    generate_mem_8[92].mem8_u generate_mem_8_92__mem8_u
+mem_in          cell    generate_mem_8[93].mem8_u generate_mem_8_93__mem8_u
+mem_in          cell    generate_mem_8[94].mem8_u generate_mem_8_94__mem8_u
+mem_in          cell    generate_mem_8[95].mem8_u generate_mem_8_95__mem8_u
+mem_in          cell    generate_mem_8[96].mem8_u generate_mem_8_96__mem8_u
+mem_in          cell    generate_mem_8[97].mem8_u generate_mem_8_97__mem8_u
+mem_in          cell    generate_mem_8[98].mem8_u generate_mem_8_98__mem8_u
+mem_in          cell    generate_mem_8[99].mem8_u generate_mem_8_99__mem8_u
+mem_in          cell    generate_mem_8[100].mem8_u generate_mem_8_100__mem8_u
+mem_in          cell    generate_mem_8[101].mem8_u generate_mem_8_101__mem8_u
+mem_in          cell    generate_mem_8[102].mem8_u generate_mem_8_102__mem8_u
+mem_in          cell    generate_mem_8[103].mem8_u generate_mem_8_103__mem8_u
+mem_in          cell    generate_mem_8[104].mem8_u generate_mem_8_104__mem8_u
+mem_in          cell    generate_mem_8[105].mem8_u generate_mem_8_105__mem8_u
+mem_in          cell    generate_mem_8[106].mem8_u generate_mem_8_106__mem8_u
+mem_in          cell    generate_mem_8[107].mem8_u generate_mem_8_107__mem8_u
+mem_in          cell    generate_mem_8[108].mem8_u generate_mem_8_108__mem8_u
+mem_in          cell    generate_mem_8[109].mem8_u generate_mem_8_109__mem8_u
+mem_in          cell    generate_mem_8[110].mem8_u generate_mem_8_110__mem8_u
+mem_in          cell    generate_mem_8[111].mem8_u generate_mem_8_111__mem8_u
+mem_in          cell    generate_mem_8[112].mem8_u generate_mem_8_112__mem8_u
+mem_in          cell    generate_mem_8[113].mem8_u generate_mem_8_113__mem8_u
+mem_in          cell    generate_mem_8[114].mem8_u generate_mem_8_114__mem8_u
+mem_in          cell    generate_mem_8[115].mem8_u generate_mem_8_115__mem8_u
+mem_in          cell    generate_mem_8[116].mem8_u generate_mem_8_116__mem8_u
+mem_in          cell    generate_mem_8[117].mem8_u generate_mem_8_117__mem8_u
+mem_in          cell    generate_mem_8[118].mem8_u generate_mem_8_118__mem8_u
+mem_in          cell    generate_mem_8[119].mem8_u generate_mem_8_119__mem8_u
+mem_in          cell    generate_mem_8[120].mem8_u generate_mem_8_120__mem8_u
+mem_in          cell    generate_mem_8[121].mem8_u generate_mem_8_121__mem8_u
+mem_in          cell    generate_mem_8[122].mem8_u generate_mem_8_122__mem8_u
+mem_in          cell    generate_mem_8[123].mem8_u generate_mem_8_123__mem8_u
+mem_in          cell    generate_mem_8[124].mem8_u generate_mem_8_124__mem8_u
+mem_in          cell    generate_mem_8[125].mem8_u generate_mem_8_125__mem8_u
+mem_in          cell    generate_mem_8[126].mem8_u generate_mem_8_126__mem8_u
+mem_in          cell    generate_mem_8[127].mem8_u generate_mem_8_127__mem8_u
+mem_in          cell    A_out_reg[6]            A_out_reg_6_
+mem_in          cell    A_out_reg[1]            A_out_reg_1_
+mem_in          cell    A_out_reg[0]            A_out_reg_0_
+mem_in          cell    A_out_reg[2]            A_out_reg_2_
+mem_in          cell    A_out_reg[3]            A_out_reg_3_
+mem_in          cell    A_out_reg[4]            A_out_reg_4_
+mem_in          cell    A_out_reg[5]            A_out_reg_5_
+1
+1
+set verilogout_no_tri TRUE
+TRUE
+write -hierarchy -format verilog -output "${top_level}.nl.v"
+Writing verilog file '/homes/user/stud/fall21/kyj2112/Systola_kevin/dc/mem_in/mem_in.nl.v'.
+1
+#write_sdf -context verilog "${top_level}.temp.sdf"
+write_sdc "${top_level}.syn.sdc" -version 1.7
+1
+write_sdf "${top_level}.syn.sdf"
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/homes/user/stud/fall21/kyj2112/Systola_kevin/dc/mem_in/mem_in.syn.sdf'. (WT-3)
+Information: Updating design information... (UID-85)
+1
+# Generate report file
+set maxpaths 20
+20
+set rpt_file "${top_level}.dc.rpt"
+mem_in.dc.rpt
+check_design > $rpt_file
+report_area  >> ${rpt_file}
+report_power -hier -analysis_effort medium >> ${rpt_file}
+report_design >> ${rpt_file}
+report_cell >> ${rpt_file}
+report_port -verbose >> ${rpt_file}
+report_compile_options >> ${rpt_file}
+report_constraint -all_violators -verbose >> ${rpt_file}
+report_timing -path full -delay max -max_paths $maxpaths -nworst 100 >> ${rpt_file}
+report_timing -delay max -nworst 1 -max_paths 10000 -path end -nosplit -unique -sort_by slack > ${top_level}.syn.critical_regs
+report_timing -delay max -nworst 1 -max_paths 10000 -path full -nosplit -unique -sort_by slack > ${top_level}.syn.critical_regs.full
+report_timing -delay max -nworst 1 -max_paths 10000 -path end -nosplit -unique -sort_by slack -to [all_outputs] > ${top_level}.syn.critical_regs.output
+report_timing -delay max -nworst 1 -max_paths 10000 -path end -nosplit -unique -sort_by slack -to [all_registers -data_pins] > ${top_level}.syn.critical_regs.regs
+report_timing -delay min -nworst 1 -max_paths 10000 -path short -nosplit -unique -sort_by slack > ${top_level}.syn.fast_path
+quit
+
+Thank you...
