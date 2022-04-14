@@ -1,10 +1,7 @@
 `timescale 1ns/1ps
 
-module mem_in
+module mem_in#(parameter sub_mems = 256, parameter addr_len = 8)
 	(Q, clk, CEN, WEN, A, D);
-
-	parameter sub_mems = 256;
-	localparam addr_len = 8;
 	
 	wire [sub_mems-1:0] CEN_sub; 	//chip enables for each mem8
 	wire [7:0] Q_sub [0:sub_mems-1];   	//output from each mem8
