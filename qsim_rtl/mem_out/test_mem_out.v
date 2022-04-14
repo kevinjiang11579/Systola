@@ -5,12 +5,14 @@
 
 module testbench();
 
-        wire [7:0] Q;
+	localparam word_len = 32;
+	localparam addr_len = 2;
+        wire [word_len-1:0] Q;
 	reg CLK;
         reg CEN;
    	reg WEN;
-	reg [15:0] A;
-	reg [7:0] D;
+	reg [addr_len+7:0] A;
+	reg [word_len-1:0] D;
    
 	integer read_out_qsim;
 	integer input_qsim;
@@ -52,7 +54,7 @@ module testbench();
 		CEN = 0;
 		WEN = 0;      
 		
-		for (i=0 ; i<32768; i=i+1) begin
+		for (i=0 ; i<$pow(2,addr_len+8); i=i+1) begin
 			A = i;
 			ret_read = $fscanf(input_file, "%d", input_qsim);
 			D = input_qsim;	
@@ -68,7 +70,7 @@ module testbench();
 			$finish;
 		end
 
-		for (i=0 ; i<32768; i=i+1) begin
+		for (i=0 ; i<$pow(2,addr_len+8); i=i+1) begin
 			A = i;
 			@(posedge CLK);
 			`HALF_CLOCK_PERIOD;

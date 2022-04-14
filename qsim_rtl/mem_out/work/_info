@@ -1,0 +1,86 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/user/stud/fall21/kyj2112/Systola_kevin/qsim_rtl/mem_out
+T_opt
+Z1 !s110 1649973236
+V;S68;PN1d;9__BjFS0`[20
+04 9 4 work testbench fast 0
+=1-54bf64608d64-625897f4-9a28a-2d46
+o-quiet -auto_acc_if_foreign -work work
+Z2 tCvgOpt 0
+n@_opt
+OE;O;10.7b_1;67
+R0
+vmem32
+!s10a 1649972408
+Z3 !s110 1649973131
+!i10b 1
+!s100 [@46XjWB3dPLL=D<N1@:Y3
+Iz7S<iV^MA><8MK<eciAoK0
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1649972408
+8../../rtl/mem_out/mem32.v
+F../../rtl/mem_out/mem32.v
+L0 53
+Z5 OE;L;10.7b_1;67
+r1
+!s85 0
+31
+!s108 1649973130.000000
+!s107 ../../rtl/mem_out/mem32.v|
+!s90 -reportprogress|300|+acc|-incr|../../rtl/mem_out/mem32.v|
+!i113 0
+Z6 o+acc -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vmem_in
+!s10a 1649973205
+R1
+!i10b 1
+!s100 6TJ<djQ?ILVkdc8AcWCB[2
+IN4XjZ3[;Ab3DIb]Tf]o4^1
+R4
+R0
+w1649973205
+8../../rtl/mem_out/mem_out.v
+F../../rtl/mem_out/mem_out.v
+L0 3
+R5
+r1
+!s85 0
+31
+!s108 1649973236.000000
+!s107 ../../rtl/mem_out/mem_out.v|
+!s90 -reportprogress|300|+acc|-incr|../../rtl/mem_out/mem_out.v|
+!i113 0
+R6
+R2
+vtestbench
+!s10a 1649973030
+R3
+!i10b 1
+!s100 =@?fAI@<L8@U1O3TY[Ik>3
+Iknn>C]CVaczCoEGI>Xd953
+R4
+R0
+w1649973030
+8test_mem_out.v
+Ftest_mem_out.v
+L0 6
+R5
+r1
+!s85 0
+31
+!s108 1649973131.000000
+!s107 test_mem_out.v|
+!s90 -reportprogress|300|+acc|-incr|test_mem_out.v|
+!i113 0
+R6
+R2
